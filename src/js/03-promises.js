@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
 			Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`),
 		);
 	if (amount > 1) {
-		promiseID = setInterval(() => {
+		const promiseID = setInterval(() => {
 			position++;
 			createPromise(position, stepDelay)
 				.then(({ position, delay }) => {
