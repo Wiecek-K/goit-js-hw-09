@@ -2,9 +2,8 @@ const body = document.querySelector("body");
 const startBtn = document.querySelector("button[data-start]");
 const stopBtn = document.querySelector("button[data-stop]");
 stopBtn.disabled = true;
-
+let changeBodyColorID;
 startBtn.addEventListener("click", () => {
-	let changeBodyColorID;
 	changeBodyColorID = setInterval(
 		() => (body.style.backgroundColor = getRandomHexColor()),
 		1000,
